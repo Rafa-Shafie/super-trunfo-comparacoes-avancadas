@@ -21,41 +21,41 @@ float obterAtributo(Carta c, int opcao) {
 
 char* nomeAtributo(int opcao) {
     switch (opcao) {
-        case 1: return "População";
-        case 2: return "Área";
+        case 1: return "Populacao";
+        case 2: return "Area";
         case 3: return "PIB";
-        case 4: return "Densidade Demográfica";
+        case 4: return "Densidade Demografica";
         default: return "Desconhecido";
     }
 }
 
 int main() {
     Carta carta1 = {"Brasil", 214.3, 8516.0, 1839.0, 25.2};
-    Carta carta2 = {"Japão", 125.7, 377.0, 5065.0, 333.6};
+    Carta carta2 = {"Japao", 125.7, 377.0, 5065.0, 333.6};
 
     int atributo1, atributo2;
 
     printf("Comparando cartas: %s vs %s\n\n", carta1.nome, carta2.nome);
 
     printf("Escolha o primeiro atributo:\n");
-    printf("1 - População\n2 - Área\n3 - PIB\n4 - Densidade Demográfica\n");
+    printf("1 - Populacao\n2 - Area\n3 - PIB\n4 - Densidade Demografica\n");
     scanf("%d", &atributo1);
 
     printf("\nEscolha o segundo atributo (diferente do primeiro):\n");
     for (int i = 1; i <= 4; i++) {
         if (i != atributo1) {
             switch (i) {
-                case 1: printf("1 - População\n"); break;
-                case 2: printf("2 - Área\n"); break;
+                case 1: printf("1 - Populacao\n"); break;
+                case 2: printf("2 - Area\n"); break;
                 case 3: printf("3 - PIB\n"); break;
-                case 4: printf("4 - Densidade Demográfica\n"); break;
+                case 4: printf("4 - Densidade Demografica\n"); break;
             }
         }
     }
 
     scanf("%d", &atributo2);
     while (atributo2 == atributo1 || atributo2 < 1 || atributo2 > 4) {
-        printf("Opção inválida! Escolha novamente: ");
+        printf("Opcao invalida! Escolha novamente: ");
         scanf("%d", &atributo2);
     }
 
